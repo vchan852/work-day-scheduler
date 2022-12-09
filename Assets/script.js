@@ -1,6 +1,6 @@
   
   // CALLS FOR TIME DIFFERENT IN AUDIT TASKS FOR LATER FUNCTION
-  
+
 
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
