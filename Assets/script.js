@@ -1,6 +1,20 @@
   
-  // CALLS FOR TIME DIFFERENT IN AUDIT TASKS FOR LATER FUNCTION
+  // CALLS FOR TIME DIFFERENT AUDIT TASKS FOR LATER FUNCTION
 
+  // CALLS FOR EACH HOUR IN THE WORK SCHEDULE 
+
+  let loadTasks = () => {
+    tasks = JSON.parse(localStorage.getItem("tasks"));
+    if (!tasks) {
+        tasks = {
+            time07: "", time08: "", time09: "", time10: "", time11: "", time12: "", time13: "",
+            time14: "", time15: "", time16: "", time17: "", time18: "", time19: "",};
+     }
+     $.each(tasks, function (timeBlock, value) {
+      createTask(timeBlock, value);
+  });
+};
+  
 
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
